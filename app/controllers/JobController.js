@@ -19,4 +19,27 @@ export default class JobController {
     //console.log("job controller")
     _draw()
   }
+
+  //Let service know that the user wants to add a job
+  addJob(event) {
+    event.preventDefault()
+
+    let form = event.target
+
+    let newJob = {
+      company: form.company.value,
+      logo: form.logo.value,
+      title: form.title.value,
+      payRate: form.payRate.value,
+      description: form.description.value
+    }
+
+    _jobService.addJob(newJob)
+    _draw()
+  }
+
+  //Let service know that the user wants to delete a job
+  deleteJob(index) {
+
+  }
 }

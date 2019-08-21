@@ -16,6 +16,10 @@ export default class JobService {
     //console.log("job service")
   }
 
+  addJob(newJob) {
+    _state.jobs.push(new Job(newJob))
+  }
+
   get Job() {
     return _state.jobs.map(job => new Job(job))
   }
