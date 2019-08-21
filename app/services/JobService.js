@@ -20,6 +20,10 @@ export default class JobService {
     _state.jobs.push(new Job(newJob))
   }
 
+  deleteJob(index) {
+    _state.jobs.splice(index, 1)
+  }
+
   get Job() {
     return _state.jobs.map(job => new Job(job))
   }

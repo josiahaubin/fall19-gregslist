@@ -8,7 +8,7 @@ function _draw() {
 
   job.forEach((job, index) => {
     template += job.Template
-    template += `<button class="btn btn-danger" onclick="app.controller.jobController.deleteJob(${index})">Delete Job</button></div>`
+    template += `<button class="btn btn-danger" onclick="app.controllers.jobController.deleteJob(${index})">Delete Job</button></div>`
   });
 
   document.querySelector('#jobs').innerHTML = template
@@ -40,6 +40,7 @@ export default class JobController {
 
   //Let service know that the user wants to delete a job
   deleteJob(index) {
-
+    _jobService.deleteJob(index)
+    _draw()
   }
 }
