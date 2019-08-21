@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="row justify-content-center">
-      <form onsubmit="app.controllers" class="col-5">
+      <form onsubmit="app.controllers.houseController.addHome(event)" class="col-5">
         <div class="form-group">
           <label for="price">Price</label>
           <input type="number" class="form-control" name="price" id="price" placeholder="Type in a price" required>
@@ -75,13 +75,13 @@
             required>
         </div>
         <div class="form-group">
-          <label for="sqft-home">Home Square Feet</label>
-          <input type="text" class="form-control" name="sqft-home" id="sqft-home" placeholder="Type in home sqft"
+          <label for="sqftHome">Home Square Feet</label>
+          <input type="text" class="form-control" name="sqftHome" id="sqftHome" placeholder="Type in home sqft"
             required>
         </div>
         <div class="form-group">
-          <label for="sqft-lot">Lot Square Feet</label>
-          <input type="text" class="form-control" name="sqft-lot" id="sqft-lot" placeholder="Type in lot sqft" required>
+          <label for="sqftLot">Lot Square Feet</label>
+          <input type="text" class="form-control" name="sqftLot" id="sqftLot" placeholder="Type in lot sqft" required>
         </div>
         <button type="submit" class="btn btn-primary">Make Home</button>
       </form>

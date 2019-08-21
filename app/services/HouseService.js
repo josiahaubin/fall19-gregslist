@@ -16,6 +16,10 @@ export default class HouseService {
     //console.log("car service")
   }
 
+  addHome(newHome) {
+    _state.house.push(new House(newHome))
+  }
+
   get House() {
     return _state.house.map(house => new House(house))
   }

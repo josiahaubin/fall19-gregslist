@@ -18,4 +18,24 @@ export default class HouseController {
     //console.log("car controller")
     _draw()
   }
+
+  //let services know that user wants to add a home
+  addHome(event) {
+    event.preventDefault()
+
+    let form = event.target
+
+    let newHome = {
+      price: form.price.value,
+      beds: form.beds.value,
+      baths: form.baths.value,
+      sqftHome: form.sqftHome.value,
+      sqftLot: form.sqftLot.value,
+      image: form.image.value
+    }
+
+    _houseService.addHome(newHome)
+    _draw()
+
+  }
 }
