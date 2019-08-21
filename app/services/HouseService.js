@@ -20,6 +20,10 @@ export default class HouseService {
     _state.house.push(new House(newHome))
   }
 
+  deleteHome(index) {
+    _state.house.splice(index, 1)
+  }
+
   get House() {
     return _state.house.map(house => new House(house))
   }

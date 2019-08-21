@@ -6,8 +6,9 @@ function _draw() {
   let template = ``
   let house = _houseService.House
 
-  house.forEach(house => {
+  house.forEach((house, index) => {
     template += house.Template
+    template += `<button class="btn btn-danger" onclick="app.controllers.houseController.deleteHome(${index})">Delete Home</button></div>`
   });
 
   document.querySelector('#houses').innerHTML = template
@@ -38,4 +39,11 @@ export default class HouseController {
     _draw()
 
   }
+
+  //let services know that user wants to delete a home
+  deleteHome(index) {
+    _houseService.deleteHome(index)
+    _draw()
+  }
+
 }

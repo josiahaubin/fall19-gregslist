@@ -17,7 +17,6 @@ export default class House {
         <h3>Baths: ${this.baths}</h3>
         <h5>Sqft Home: ${this.sqftHome}</h5>
         <h5>Sqft Lot: ${this.sqftLot}</h5>
-      </div>
       `
   }
 }
