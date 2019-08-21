@@ -89,6 +89,38 @@
     <div id="houses" class="row my-5">
 
     </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <h1>Make a Job!</h1>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <form onsubmit="app.controllers.houseController.addJob(event)" class="col-5">
+        <div class="form-group">
+          <label for="company">Company Name</label>
+          <input type="text" class="form-control" name="company" id="company" placeholder="Type in company name"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="logo">Company Logo</label>
+          <input type="text" class="form-control" name="logo" id="logo" placeholder="Type in logo address" required>
+        </div>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" name="title" id="title" placeholder="Type in the title" required>
+        </div>
+        <div class="form-group">
+          <label for="payRate">Pay Rate</label>
+          <input type="text" class="form-control" name="payRate" id="payRate" placeholder="Type in a Pay Rate" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" class="form-control" name="description" id="description"
+            placeholder="Type in a description" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Make Job</button>
+      </form>
+    </div>
     <div id="jobs" class="row my-5">
 
     </div>
