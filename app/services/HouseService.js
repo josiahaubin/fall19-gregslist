@@ -1,11 +1,22 @@
 import House from "../models/House.js";
 
 let _state = {
-  house: new House()
+  house: [new House({
+    price: 250000,
+    beds: 3,
+    baths: 2,
+    sqftHome: 1147,
+    sqftLot: 6839,
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/W.H.H._Clayton_House.JPG/1200px-W.H.H._Clayton_House.JPG"
+  })]
 }
 
 export default class HouseService {
   constructor() {
     //console.log("car service")
+  }
+
+  get House() {
+    return _state.house.map(house => new House(house))
   }
 }
